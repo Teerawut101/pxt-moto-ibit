@@ -61,7 +61,7 @@ namespace motobit {
     }
 
     //% weight=90
-    //% blockId="pinON" block="turn motors %command"
+    //% blockId="pinON" block="PinOn %command"
     export function PinOn(command: MotorPower): void {
         pins.i2cWriteNumber(89, command, NumberFormat.Int16BE)
     }
