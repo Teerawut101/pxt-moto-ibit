@@ -60,6 +60,11 @@ namespace motobit {
         pins.i2cWriteNumber(89, command, NumberFormat.Int16BE)
     }
 
+    //% weight=90
+    //% blockId="pinON" block="turn motors %command"
+    export function PinOn(command: MotorPower): void {
+        pins.i2cWriteNumber(89, command, NumberFormat.Int16BE)
+    }
 	/**
 	 * Changes the polarity of the selected motor.
 	 * i.e. Forward -> Backward and Backward -> Forward
