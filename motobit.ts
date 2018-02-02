@@ -58,6 +58,8 @@ namespace ibit {
         let pwr = 0
         speed = Math.abs(speed)
     }
+
+
 	/**
 	 * Turns the motors on or off.
 	 */
@@ -66,13 +68,6 @@ namespace ibit {
     export function enable(command: MotorPower): void {
         pins.i2cWriteNumber(89, command, NumberFormat.Int16BE)
     }
-
-    //% weight=90
-    //% blockId="pinON" block="PinOn %command"
-    export function moto(command: MotorPower): void {
-        pins.i2cWriteNumber(89, command, NumberFormat.Int16BE)
-    }
-
 
 	/**
 	 * Changes the polarity of the selected motor.
