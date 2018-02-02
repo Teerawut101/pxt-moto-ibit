@@ -13,7 +13,9 @@ enum MotorDirection {
     //% block="turnleft"
     Turnleft = 2,
     //% block="turnright"
-    Turnright = 3
+    Turnright = 3,
+   //% block="stop"
+    Stop = 4
 }
 
 enum MotorPower {
@@ -66,22 +68,25 @@ namespace ibit {
         }
 
         if (direction == MotorDirection.Forward) {
-		pins.digitalWritePin(DigitalPin.P0, 1)
-		pins.digitalWritePin(DigitalPin.P1, 1)
+		pins.analogWritePin(AnalogPin.P0, speed)
+		pins.analogWritePin(AnalogPin.P1, speed)
         }
         else if  (direction == MotorDirection.Reverse){
-		
-		pins.digitalWritePin(DigitalPin.P0, 0)
-		pins.digitalWritePin(DigitalPin.P1, 0)
+		pins.analogWritePin(AnalogPin.P0, 0)
+		pins.analogWritePin(AnalogPin.P1, 0)
            
         }else if  (direction == MotorDirection.Turnleft){
-		pins.digitalWritePin(DigitalPin.P0, 1)
-		pins.digitalWritePin(DigitalPin.P1, 0)
+		pins.analogWritePin(AnalogPin.P0, speed)
+		pins.analogWritePin(AnalogPin.P1, 0)
            
         }else if  (direction == MotorDirection.Turnright){
-		pins.digitalWritePin(DigitalPin.P0, 0)
-		pins.digitalWritePin(DigitalPin.P1, 1)
-           
+		pins.analogWritePin(AnalogPin.P0, 0)
+		pins.analogWritePin(AnalogPin.P1, speed)
+  
+        }else if  (direction == MotorDirection.Stop){
+		pins.analogWritePin(AnalogPin.P0, 0)
+		pins.analogWritePin(AnalogPin.P1, 0)
+  
         }
     }
 
