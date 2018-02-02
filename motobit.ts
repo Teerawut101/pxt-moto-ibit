@@ -31,7 +31,7 @@ enum Chadc8 {
 /**
  * Functions to operate the moto:bit
  */
-//% color=#39a854 icon="\uf1b9" block="iBIT"
+//% color=#60dba8 icon="\uf1b9" block="iBIT"
 namespace ibit {
     /**
 	 * พริ้วดั่งสายน้ำ
