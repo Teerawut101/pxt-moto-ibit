@@ -22,9 +22,11 @@ enum MotorPower {
     //%block="OFF"
     Off = 28672
 }
-enum Chadc {
+enum Chadc8 {
     //%block="A0"
-    A0 = 0
+    A0 = 0,
+//%block="A1"
+    A1 = 1
 }
 /**
  * Functions to operate the moto:bit
@@ -77,8 +79,8 @@ namespace ibit {
       */
     //% blockId="iBit_ReadADC" block="read ADC %path"
     //% weight=80
-    export function readLight(ch: Chadc): number {    
-        return 0;
+    export function readLight(ch: Chadc8): number {    
+        return ch;
     }
     
 }
