@@ -13,9 +13,7 @@ enum MotorDirection {
     //% block="turnleft"
     Turnleft = 2,
     //% block="turnright"
-    Turnright = 3,
-   //% block="stop"
-    Stop = 4
+    Turnright = 3
 }
 
 enum MotorPower {
@@ -83,13 +81,14 @@ namespace ibit {
 		pins.analogWritePin(AnalogPin.P0, 0)
 		pins.analogWritePin(AnalogPin.P1, speed)
   
-        }else if  (direction == MotorDirection.Stop){
-		pins.analogWritePin(AnalogPin.P0, 0)
-		pins.analogWritePin(AnalogPin.P1, 0)
-  
         }
     }
-
+   //% weight=90
+    //% blockId="motobit_stop" block="motorStop"
+    export function motorStop(): void {
+       pins.analogWritePin(AnalogPin.P0, 0)
+       pins.analogWritePin(AnalogPin.P1, 0)
+    }
 
 	/**
 	 * Turns the motors on or off.
