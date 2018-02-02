@@ -1,6 +1,6 @@
 # Moto:bit
 
-![SparkFun Moto:bit](https://raw.githubusercontent.com/sparkfun/pxt-moto-bit/master/icon.png)  
+![SparkFun Moto:bit](https://raw.githubusercontent.com/Teerawut101/pxt-moto-ibit/master/icon.png)  
 
 The package adds support for the **moto:bit** add-on board from SparkFun.
 
