@@ -79,4 +79,15 @@ namespace motobit {
             pins.i2cWriteNumber(89, (4864 + temp_number), NumberFormat.Int16BE)
         }
     }
+    
+    
+     export function invert(motor: Motor, invert: boolean): void {
+        const temp_number = invert ? 1 : 0;
+        if (motor == Motor.Right) {
+            pins.i2cWriteNumber(89, (4608 + temp_number), NumberFormat.Int16BE)
+        }
+        else {
+            pins.i2cWriteNumber(89, (4864 + temp_number), NumberFormat.Int16BE)
+        }
+    }
 }
