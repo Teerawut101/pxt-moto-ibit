@@ -1,7 +1,7 @@
 {
-    "name": "ibit",
+    "name": "iBIT",
     "version": "0.0.1",
-    "description": "ibit",
+    "description": "iBIT",
     "license": "MIT",
     "dependencies": {
         "core": "*"
