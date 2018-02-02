@@ -41,7 +41,7 @@ namespace ibit {
     //% blockId="motobit_MotorMove" block="motorMove %path|at speed %speed|%"
     //% speed.min=0 speed.max=100
     //% weight=80
-    export function MotorMove(direction: MotorDirection, speed: number): void {
+    export function Move(direction: MotorDirection, speed: number): void {
 	  let pwr = 0
         speed = Math.abs(speed)
         if (speed > 100) {
@@ -68,7 +68,7 @@ namespace ibit {
     }
    //% weight=90
     //% blockId="motobit_stop" block="motorStop"
-    export function motorStop(): void {
+    export function Stop(): void {
        pins.analogWritePin(AnalogPin.P0, 0)
        pins.analogWritePin(AnalogPin.P1, 0)
     }
@@ -79,7 +79,7 @@ namespace ibit {
       */
     //% blockId="iBit_ReadADC" block="read ADC %path"
     //% weight=80
-    export function readLight(ch: Chadc8): number {    
+    export function readSensor(ch: Chadc8): number {    
         return ch;
     }
     
