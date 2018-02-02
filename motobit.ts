@@ -10,6 +10,10 @@ enum MotorDirection {
     Forward = 0,
     //% block="reverse"
     Reverse = 1
+    //% block="turnleft"
+    Turnleft = 2,
+    //% block="turnright"
+    Turnright = 3
 }
 
 enum MotorPower {
@@ -55,6 +59,30 @@ namespace ibit {
     //% speed.min=0 speed.max=100
     //% weight=80
     export function MotorMove(direction: MotorDirection, speed: number): void {
+	  let pwr = 0
+        speed = Math.abs(speed)
+        if (speed > 100) {
+            speed = 100
+        }
+
+        if (direction == MotorDirection.Forward) {
+		pins.digitalWritePin(DigitalPin.P0, 1)
+		pins.digitalWritePin(DigitalPin.P1, 1)
+        }
+        else if  (direction == MotorDirection.Reverse){
+		
+		pins.digitalWritePin(DigitalPin.P0, 0)
+		pins.digitalWritePin(DigitalPin.P1, 0)
+           
+        }else if  (direction == MotorDirection.Turnleft){
+		pins.digitalWritePin(DigitalPin.P0, 1)
+		pins.digitalWritePin(DigitalPin.P1, 0)
+           
+        }else if  (direction == MotorDirection.Turnright){
+		pins.digitalWritePin(DigitalPin.P0, 0)
+		pins.digitalWritePin(DigitalPin.P1, 1)
+           
+        }
     }
 
 
