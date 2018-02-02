@@ -51,7 +51,7 @@ namespace ibit {
         pins.i2cWriteNumber(89, (motor + pwr), NumberFormat.Int16BE)
     }
 
-    //% blockId="motobit_Motor" block="motor motor %path|at %speed|%"
+    //% blockId="motobit_Motor" block="motor %path|at speed %speed|%"
     //% speed.min=0 speed.max=100
     //% weight=80
     export function Motor(direction: MotorDirection, speed: number): void {
