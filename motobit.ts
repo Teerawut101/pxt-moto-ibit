@@ -38,7 +38,7 @@ namespace ibit {
   
 	 */
 
-    //% blockId="motobit_MotorMove" block="motorMove %path|at speed %speed|%"
+    //% blockId="motobit_MotorMove" block="Move %path|at speed %speed|%"
     //% speed.min=0 speed.max=100
     //% weight=80
     export function Move(direction: MotorDirection, speed: number): void {
@@ -67,7 +67,7 @@ namespace ibit {
         }
     }
    //% weight=90
-    //% blockId="motobit_stop" block="motorStop"
+    //% blockId="motobit_stop" block="Stop"
     export function Stop(): void {
        pins.analogWritePin(AnalogPin.P0, 0)
        pins.analogWritePin(AnalogPin.P1, 0)
