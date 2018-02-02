@@ -64,22 +64,22 @@ namespace ibit {
         if (speed > 100) {
             speed = 100
         }
-
+        pwr = pins.map(speed, 0, 100, 0, 1023)
         if (direction == MotorDirection.Forward) {
-		pins.analogWritePin(AnalogPin.P0, speed)
-		pins.analogWritePin(AnalogPin.P1, speed)
+		pins.analogWritePin(AnalogPin.P0, pwr)
+		pins.analogWritePin(AnalogPin.P1, pwr)
         }
         else if  (direction == MotorDirection.Reverse){
 		pins.analogWritePin(AnalogPin.P0, 0)
 		pins.analogWritePin(AnalogPin.P1, 0)
            
         }else if  (direction == MotorDirection.Turnleft){
-		pins.analogWritePin(AnalogPin.P0, speed)
+		pins.analogWritePin(AnalogPin.P0, pwr)
 		pins.analogWritePin(AnalogPin.P1, 0)
            
         }else if  (direction == MotorDirection.Turnright){
 		pins.analogWritePin(AnalogPin.P0, 0)
-		pins.analogWritePin(AnalogPin.P1, speed)
+		pins.analogWritePin(AnalogPin.P1, pwr)
   
         }
     }
