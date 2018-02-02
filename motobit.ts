@@ -51,10 +51,10 @@ namespace ibit {
         pins.i2cWriteNumber(89, (motor + pwr), NumberFormat.Int16BE)
     }
 
-    //% blockId="motobit_setMotor" block="move %motor_number motor|motor %path|at %speed|%"
+    //% blockId="motobit_Motor" block="motor %motor_number motor|motor %path|at %speed|%"
     //% speed.min=0 speed.max=100
     //% weight=80
-    export function Motor(motor: Motor, direction: MotorDirection, speed: number): void {
+    export function Motor(direction: MotorDirection, speed: number): void {
         let pwr = 0
         speed = Math.abs(speed)
         if (speed > 100) {
