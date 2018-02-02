@@ -29,7 +29,7 @@ enum Chadc8 {
     A1 = 1
 }
 /**
- * Functions to operate the moto:bit
+ * Functions to operate the iBIT
  */
 //% color=#60dba8 icon="\uf1b9" block="iBIT"
 namespace ibit {
