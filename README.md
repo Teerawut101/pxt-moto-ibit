@@ -1,8 +1,8 @@
-# ibit
+# iBIT
 
 ![SparkFun Moto:bit](https://raw.githubusercontent.com/Teerawut101/pxt-moto-ibit/master/icon.png)  
 
-The package adds support for the **ibit** add-on board from SparkFun.
+The package adds support for the **iBIT** add-on board from SparkFun.
 
 TODO: To use this package, go to https://pxt.microbit.org, click ``Add package`` and search for **ibit**.
 
