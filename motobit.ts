@@ -9,7 +9,7 @@ enum MotorDirection {
     //% block="forward"
     Forward = 0,
     //% block="reverse"
-    Reverse = 1
+    Reverse = 1,
     //% block="turnleft"
     Turnleft = 2,
     //% block="turnright"
