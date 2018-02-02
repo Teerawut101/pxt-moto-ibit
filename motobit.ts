@@ -54,6 +54,10 @@ namespace ibit {
 
         pins.i2cWriteNumber(89, (motor + pwr), NumberFormat.Int16BE)
     }
+    /**
+	 * พริ้วดั่งสายน้ำ
+  
+	 */
 
     //% blockId="motobit_MotorMove" block="motorMove %path|at speed %speed|%"
     //% speed.min=0 speed.max=100
