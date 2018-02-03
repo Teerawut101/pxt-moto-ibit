@@ -34,7 +34,7 @@ enum Chadc8 {
 //% color=#20875c icon="\uf1b9" block="iBIT"
 namespace iBIT {
     /**
-	 * พริ้วดั่งสายน้ำ
+	 * พริ้วดั่งสายน้ำนะจ๊ะ!
   
 	 */
 
@@ -67,7 +67,7 @@ namespace iBIT {
         }
     }
    //% weight=90
-    //% blockId="motobit_stop" block="Stop"
+    // //% blockId="motobit_stop" block="Stop"
     export function Stop(): void {
        pins.analogWritePin(AnalogPin.P0, 0)
        pins.analogWritePin(AnalogPin.P1, 0)
