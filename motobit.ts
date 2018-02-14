@@ -82,5 +82,11 @@ namespace iBIT {
     export function readSensor(ch: Chadc8): number {    
         return ch;
     }
+    export function readSensor(ch: Chadc8): number {    
+        return ch;
+    }
+    export function readSensor(ch: Chadc8): number {    
+        return ch;
+    }
     
 }
